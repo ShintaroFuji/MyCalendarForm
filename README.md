@@ -1,0 +1,2 @@
+# MyCalendarForm
+予定追加機能を備えたウェブベースのカレンダーアプリ。JavaとSpring Frameworkで開発されています。
