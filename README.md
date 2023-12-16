@@ -3,7 +3,8 @@
 
 ## 学習資料
 このプロジェクトは以下の教材を参考にしました：
-- [Spring 入門 ～ SpringBoot 2 を使ってお問い合わせアプリとToDoアプリを作る ～](https://www.udemy.com/course/java_spring_beginner/)
+- [【Javaプログラマー必須】最強のフレームワーク、Spring。環境構築、Thymeleaf画面作成、依存性の注入まで。](https://www.udemy.com/course/javaspringdi/)　　
+- [Spring 入門 ～ SpringBoot 2 を使ってお問い合わせアプリとToDoアプリを作る ～](https://www.udemy.com/course/java_spring_beginner/)　　
 
 ## プロジェクトの背景と目的
 このプロジェクトは、Javaの広範な利用と転職活動におけるその重要性を背景に、Javaおよび関連技術の習得を目的として始めました。  
