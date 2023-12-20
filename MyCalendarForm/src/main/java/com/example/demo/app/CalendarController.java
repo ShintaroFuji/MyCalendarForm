@@ -7,8 +7,12 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
+import jakarta.servlet.http.HttpSession;
 
 @Controller
+@SessionAttributes("AppointmentForm")
 public class CalendarController {
 
     @GetMapping("/calendar")
@@ -25,6 +29,19 @@ public class CalendarController {
             // エラーハンドリング
             return "calendar";
         }
+        	//なかったらviewへ
+        return "redirect:/calendar-view";
+    }
+    
+    @GetMapping("/calendar-view")
+    public String calendarView(Model model, HttpSession session) {
+        AppointmentForm appointmentForm = (AppointmentForm) session.getAttribute("appointmentForm");
+        if (appointmentForm != null) {
+            model.addAttribute("appointmentForm", appointmentForm);
+        }
+        return "calendar-view";
+    }
+}
         	//なかったらviewへ
         return "redirect:/calendar-view";
     }
