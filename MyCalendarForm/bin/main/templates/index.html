@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>スケジュール一覧</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #fff;
+            margin: 5px;
+            padding: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 th:text="${title}">スケジュール一覧</h1>
+    </header>
+    <div class="container">
+        <ul>
+            <li th:each="calendar : ${scheduleList}">
+                <span th:text="${calendar.date}">日付</span> - 
+                <span th:text="${calendar.startTime}">開始時間</span> - 
+                <span th:text="${calendar.endTime}">終了時間</span> : 
+                <span th:text="${calendar.description}">説明</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

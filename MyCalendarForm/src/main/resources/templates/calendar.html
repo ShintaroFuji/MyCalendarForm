@@ -1,23 +1,23 @@
-<!--This is the completed HTML file -->
-
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="UTF-8">
-	<title th:text="${title}">Insert title here</title>
+	<title th:text="${title}">スケジュール登録</title>
 </head>
 
 <body>
-	<h1 th:text="${title}">title</h1>
-	<form action="#" th:action="@{/calendar}" th:object="${appointmentForm}" method="post">
+	<h1 th:text="${title}">スケジュール詳細</h1>
+	<form th:action="@{/calendar}" th:object="${calendarForm}" method="post">
+		<p>日付:</p>
 		<input type="date" th:field="*{date}" />
+		<p>開始時間:</p>
 		<input type="time" th:field="*{startTime}" />
+		<p>終了時間:</p>
 		<input type="time" th:field="*{endTime}" />
+		<p>説明:</p>
 		<textarea th:field="*{description}"></textarea>
-		<input type="submit" value="Submit" />
-	</form>
-
+		<input type="submit" value="登録" />
 	</form>
 </body>
 
