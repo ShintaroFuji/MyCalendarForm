@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>スケジュール詳細</title>
+</head>
+
+<body>
+	<h1>スケジュール詳細</h1>
+
+	<!-- スケジュールの詳細を表示 -->
+	<div th:if="${appointmentForm != null}">
+    	<h2>日付: <span th:text="${appointmentForm.date}"></span></h2>
+		<h3>開始時間: <span th:text="${appointmentForm.startTime}"></span></h3>
+		<h3>終了時間: <span th:text="${appointmentForm.endTime}"></span></h3>
+		<p>説明: <span th:text="${appointmentForm.description}"></span></p>
+	</div>
+
+	<!-- 戻るボタン -->
+	<a href="/calendar">戻る</a>
+</body>
+
+</html>
